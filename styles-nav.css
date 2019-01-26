@@ -1,10 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Philosopher|Covered+By+Your+Grace|Fredericka+the+Great');
+@font-face {
+	font-family: EE-Bellflower;
+	src: url(fonts/EE-Bellflower.otf);
+}
 
 body {
 	background-image: url(./images/BG.jpg);
 	background-color: #ece8e5;
     background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 100%;
+}
+.img-menu{
+	position: relative;
+}
+
+.easteregg {
+	background: #0984e3;
+	padding: 10px 24px;
+	font-family: EE-Bellflower;
+	color: white;
+	text-decoration: none;
+	font-size: 30px;
+	border-radius: 20px;
+	display: none;
 }
 
 .header {
@@ -14,7 +32,8 @@ body {
 	margin: 0;
 	left: 0px;
 	right: 0px;
-	font-size: 15pt;font-family: 'Philosopher', sans-serif;
+	font-size: 15pt;
+	font-family: 'Philosopher', sans-serif;
 	position: relative;
 	border-bottom: 2px solid #283744;
 	display: flex;
@@ -25,22 +44,22 @@ body {
 	margin-left: 20px;
 }
 
-.header ul {
+.header .menu {
 	padding: 0;
 	margin: 0 auto;
 	width: 600px;
 	height: 40px;
 }
 
-.header li {
+.header .menu {
 	float: left;
 }
 
-.header * {
+.header .menu {
 	display: inline;
 }
 
-.header a {
+.header .menu a {
 	color: #fff;
 	display: inline-block;
 	width: 100px;
@@ -50,7 +69,7 @@ body {
 	text-shadow: 1px 1px 0px #283744;
 }
 
-.header li a {
+.header .menu a {
 	border-right: 1px solid #576979;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -58,12 +77,16 @@ body {
 }
 
 
-.header li:last-child a{
+.last-item {
 	border-right: 0;
 }
 
-.header a:hover, nav a:active {
+.header a:hover, .header a:active {
 	background-color: #3399ff;
+}
+
+.header .sub-menu {
+	display: none;
 }
 
 .section-top {
@@ -84,22 +107,22 @@ body {
 
 .content h1 {
 	color: white;
-	font-family: 'Fredericka the Great', cursive;
-	font-size: 70px;
+	font-family: EE-Bellflower;
+	font-size: 76px;
 	letter-spacing: 16px;
 }
 
-.content a {
+.content .button a {
 	background: #0984e3;
 	padding: 10px 24px;
-	font-family: 'Fredericka the Great', cursive;
+	font-family: EE-Bellflower;
 	color: white;
 	text-decoration: none;
-	font-size: 26px;
+	font-size: 30px;
 	border-radius: 20px;
 }
 
-.content a:hover {
+.content .button a:hover {
 	background: #9933ff;
 }
 
