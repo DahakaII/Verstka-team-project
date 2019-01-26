@@ -8,22 +8,66 @@
 </head>
 <body>
 	<div class="header">
-		<img src="./images/nav.jpg">
-	    <ul>
-	        <li><a href="#">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Contact</a></li>
-			<li><a href="#">Chat</a></li>
-			<li><a href="#">Feedback</a></li>
-	    </ul>
+
+		<div id="img-menu" class="img-menu">
+			<img src="./images/nav.jpg">
+
+			<div class="easteregg">
+				<a href="#">EASTEREGG MOTHEFUCKER</a>
+			</div>
+
+		</div>
+
+		<div class="menu">
+
+			<a href="#">Home</a>
+			<a href="#">About</a>
+			<a href="#">Contact</a>
+			<a href="#">Chat</a>
+			<a href="#" class="last-item">Feedback</a>
+		</div>
+	    
+	        
+	    
 	</div>
 
 	<div class="section-top">
 			
 			<div class="content">
 				<h1>Coding</h1>
-				<a href="#">Subscribe Now</a>
+				<div class="button">
+					<a href="#">Subscribe Now</a>
+				</div>				
 			</div>
 	</div>
+
+<script>
+
+document.getElementById('img-menu').onmouseover= function(event) {
+	var target = event.target;
+	if (target.className == 'img-menu') {
+		var s=target.getElementsByClassName('easteregg');
+		closeMenu();
+		s[0].style.display='block';
+	}
+}
+
+document.onmousemove=function(event) {
+	var target = event.target;
+	console.log(event.target);
+	if (target.className!='img-menu' && target.className!="easteregg") {
+		closeMenu();
+	}
+}
+
+function closeMenu(){
+	var menu=document.getElementById('img-menu');
+	var subm=document.getElementsByClassName('easteregg')
+	for (var i=0; i<subm.length; i++) {
+		subm[i].style.display="none";
+	}
+}
+</script>
+
 </body>
 </html>
